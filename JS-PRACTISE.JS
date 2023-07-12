@@ -106,3 +106,104 @@ else{
 }
 
 //this string are palindrome
+
+// code : 8 
+
+let ress = 'i love india'
+function krunal(){
+    let ans = ress.split(' ').reverse().join(' ').split('').reverse().join('').split(' ')
+    return ans
+
+}
+console.log(krunal());
+
+// [ 'i', 'evol', 'aidni' ] split() allwaYS giving value on array from
+
+//Code 9: To find longest word from a string using (for of) /*for(var i=0; i>=num; i++) means iterate by indexing*/  /*for (var word of words) means iterate by an elements not
+// by indexing*/
+function krunal() {
+  const name = "supriya good girl or not";
+  const names = name.split(" ");
+  let bucket = "";
+  for (let i = 0; i < names.length; i++) {
+    if (names[i].length > bucket.length) {
+       bucket = names[i];
+    }
+  }
+  return bucket;
+}
+console.log(krunal())
+
+//supriya
+
+//Code 10: To find longest word from a string using functions
+
+function longestword(){
+    let word = "supriya good girl or not"
+let opreation = word.split(' ').sort((a, b) => b.length - a.length)
+console.log(opreation[0]);
+console.log(opreation);
+}
+longestword()
+
+//supriya
+//[ 'supriya', 'good', 'girl', 'not', 'or' ]
+
+//Code 11: To find longest common string from array of strings
+function longestcommaonstring(){
+let arr1 = ['go', 'google', 'gooes']
+
+var arr = arr1.sort()
+//console.log(sorting);
+let i=0
+while (arr[0].length>0 & arr[0][i]===arr[arr.length-1][i]) {
+    i++;
+
+}
+console.log(arr[0].slice(0, i));
+
+}
+longestcommaonstring()
+
+//go
+
+//Code 12: To find longest common string from array of strings
+function longestcommaonstring() {
+    let arr1 = ['go', 'google', 'gooes']
+    let arr = arr1.sort()
+     let result = ''
+    for(let i=0; i<arr1[0].length; i++){
+        if(arr[0][i]===arr[arr.length-1][i]){
+                 result += arr[0][i]
+        }
+
+    }
+      return result
+
+}
+console.log(longestcommaonstring());
+
+//go
+
+//code 13: To find vowels and its count in a given string
+
+function vowels() {
+  let arr = ["a", "e", "i", "o", "u"];
+
+  let name = "krunal".split("");
+  let result = " ";
+  
+  
+  for (let i = 0; i <name.length; i++) {
+    if (arr.includes(name[i])) {
+                result +=name[i]
+                     
+        }
+  }
+   return result
+  //console.log(result.length);
+}
+console.log(vowels())
+
+//2
+// ua
