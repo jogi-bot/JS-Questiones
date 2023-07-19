@@ -207,3 +207,17 @@ console.log(vowels())
 
 //2
 // ua
+
+//math and min understand 
+const findbig = [1,2,3,4,54,5]
+console.log(Math.max[findbig])
+//undefined
+console.log(Math.max(1,2,3,4,5,5))
+//5
+
+let a = [1,2,3,4,4]
+console.log(Math.min(a));
+//NaN
+let a =  [1,2,3,4,4]
+console.log(Math.min(...a))
+
