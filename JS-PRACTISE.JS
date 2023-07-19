@@ -221,3 +221,75 @@ console.log(Math.min(a));
 let a =  [1,2,3,4,4]
 console.log(Math.min(...a))
 
+// vowel count in js using number out put 
+
+function vowel() {
+  let a = "krunall".split("");
+  let vowel = ["a", "e", "i", "o", "u"];
+  let ab = ''
+  for (let i = 0; i < a.length; i++) {
+    if (vowel.includes(a[i])) {
+        ab++
+           
+    }
+  }
+  return ab
+}
+
+console.log(vowel())
+
+//2
+
+//find charactaer for string 
+function findCharacter(str, target) {
+  let i = 0
+  if(str.charAt(i)===target){
+      console.log('available in str');
+ }
+
+ console.log('not avilable ');
+}
+findCharacter('krunal', 'e')
+
+//not avilable 
+
+//get sum of zero
+
+function getSumPairZero(array){
+  for(let i=0; i<array.length; i++){
+
+      for(let j=1; i<array.length;  j++ ){
+
+
+          if(array[i]+array[j]==0){
+              console.log([array[i], array[j]]); 
+          }
+      }
+
+  }
+
+
+}
+console.log(getSumPairZero([-5,-4,-3,-2,-1,0,1,2,3,4,5]));
+
+//[ -5, 5 ]
+
+//find two largest pair in number 
+
+function findingTwolargest(arr){
+  let a  =  arr.sort((a, b) => b - a )
+    
+  console.log(a[0], a[1]);
+}
+findingTwolargest([9,7,8,4,5,6,1,2,3])
+
+//9 8
+
+//To find the largest pair of the 2 elements using indexing with sorted elements
+function findingTwolargest(arr){
+  console.log((arr[arr.length-1]+ arr[arr.length-2]));
+  
+ }
+findingTwolargest([1,2,3])
+
+//5
