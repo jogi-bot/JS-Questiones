@@ -293,3 +293,52 @@ function findingTwolargest(arr){
 findingTwolargest([1,2,3])
 
 //5
+
+//fibonaci series code 
+
+function fib(n){
+  let  a = [0, 1]
+
+  for(let i=0; i<n; i++){
+      a.push(a[i]+a[i+1])
+
+  }
+  return a 
+
+}
+console.log(fib(5))
+
+//[
+  0, 1, 1, 2,
+  3, 5, 8
+//]
+
+//Find the missing no. in an array
+function missing(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    const value = arr[i] + 1;
+    if (arr[i+1] !== value) {
+      console.log('Missing element:', value);
+    }
+  }
+}
+
+missing([1, 2,3 ,5, 6,  8, 9]);
+
+// Missing element: 4
+//Missing element: 7
+
+
+//Sorting of an string/character
+
+function sorting(sr){
+  console.log(sr.sort())
+
+}
+sorting(['a','b','t','h','j','f','x'])
+
+//[
+//'a', 'b', 'f',
+//  'h', 'j', 't',
+//  'x'
+//]
