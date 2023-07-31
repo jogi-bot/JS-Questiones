@@ -342,3 +342,78 @@ sorting(['a','b','t','h','j','f','x'])
 //  'h', 'j', 't',
 //  'x'
 //]
+
+//finding first duplicate element from an array
+
+function findDuplicate(arr){
+
+  for(let i=0; i<arr.length; i++){
+if(arr[i] === arr[i+1]){
+
+console.log(arr[i]);
+break
+}
+}
+
+
+}
+findDuplicate([1,2,2,4,4,5,6,7,8])
+
+//2
+
+// another way to dupliocate find 
+function firstDuplicate() {
+  let arr = [1, 2, 2, 5, 5];
+  let data = {};
+  for (var item of arr) {
+    if (data[item]) {
+      return item;
+    } else {
+      data[item] = item;
+      console.log(data[item]);
+    }
+  }
+
+}
+console.log(firstDuplicate());
+
+//out-put 
+1
+2
+2
+
+//Uppercase of each first letter of a words using map function
+
+
+function uppercase(){
+  let arr = "india is my favcontry"
+  word = arr.toLocaleLowerCase().split(' ');
+  for(let i=0; i<word.length; i++){
+     word[i] = word[i][0].toUpperCase()+word[i].slice(1)
+  }
+  console.log(word.join(" "))
+  
+  
+  }
+  uppercase()
+  //India Is My Favcontry
+
+  //using map try Uppercase of each first letter of a words using map function
+
+
+  function uppercase() { 
+    let a = "india is my favcontry"
+
+   let orignalarray =  a.toLowerCase().split(' ').map((ele)=> {
+        return  ele[0].toUpperCase() + ele.slice(1)
+
+    })
+      return orignalarray.join(' ')
+ 
+
+}
+console.log(uppercase())
+
+//India Is My Favcontry
+ 
+
