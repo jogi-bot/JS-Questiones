@@ -415,5 +415,97 @@ function uppercase(){
 console.log(uppercase())
 
 //India Is My Favcontry
+
+
+function endingWith(str, target){
+  return str.endsWith(target)
+
+}
+console.log(endingWith('krunal', 'l'))
+
+//true
  
+function endingWith (str, target){
+
+  return str.substr(-target.length)==target
+}
+
+console.log(endingWith('krunal', 'l'));
+
+//true
+
+
+////Print string n times using inbuilt function
+
+function printString(str, target){
+ 
+  return  str.repeat( target )
+}
+console.log(printString('sachin', 3));
+
+// sachinsachinsachin
+
+//Code 42: Print string n times in custom way
+
+function Printstring(str, target){
+  if(target<1) return 'unknown value'
+  let  final = ' '
+  for(let i=0; i <target; i++){
+                   
+        final =  final+str+","
+  }
+ return final
+
+}
+console.log(Printstring( 'sachin' , 4))
+
+//sachin,sachin,sachin,sachin,
+
+//Code 43:Print string n times in custom way
+
+function printstring( str , num) {
+  if(num<1) return ""
+ if(num==1) return str
+  return  str + printstring(str, num-1)
+
+
+}
+console.log(printstring('krunal', 4))
+
+//krunalkrunalkrunalkrunal
+
+
+
+const truniCate = (str, num) => {
+  if(num<=3){
+    return str.slice(0, num)
+  }
+     return str.slice(0, num-3)+'...'
+  }
+  console.log(truniCate( 'krunal', 4))
+  
+  //k...
+
+
+
+  //code : 47 
+  function dimenstionalArray(arr, size ){
+
+    var groups = [] 
+   while(arr.length>0){
+     groups.push(arr.slice(0, size))
+     arr = arr.slice(size)
+    
+   
+   }
+   return groups
+   
+   
+   }
+   console.log(dimenstionalArray([1,2,3,4,5], 2))
+
+   //[ [ 1, 2 ], [ 3, 4 ], [ 5 ] ]
+
+
+  
 
