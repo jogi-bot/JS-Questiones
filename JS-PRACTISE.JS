@@ -507,5 +507,103 @@ const truniCate = (str, num) => {
    //[ [ 1, 2 ], [ 3, 4 ], [ 5 ] ]
 
 
+   // To find only truthy values using filter
+
+function trulyValue(value) {
+  return value.filter((data) => {
+    return data;
+  });
+}
+console.log(trulyValue(["priya", 0, "", false, null, undefined, "ate", 9]));
+
+// //[ 'priya', 'ate', 9 ]
+
+// /Checking all letters of second words should present in first word, in the same order using include function
+
+function allLetters(value) {
+  let first = value[0];
+  let second = value[1];
+
+  for (let letter of second) {
+    if (first.includes(letter)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+console.log(allLetters(["hello", "hey"]))
+
+// //true
+
+function allLetters(value) {
+  let first = value[0].toLowerCase();
+
+  let second = value[1].toLowerCase();
+
+  for (let value of second) {
+    if (first.indexOf(value) === -1) {
+    }
+    return false;
+  }
+}
+console.log(allLetters(["hello", "dwsdf"]));
+
+// false
+
+//Code 53: Unique values only from 2 arrays
+
+function diffrentVAlue(arr1, arr2) {
+  let result = [];
+  for (let value1 of arr1) {
+    if (arr2.indexOf(value1) == -1) {
+      result.push(value1);
+    }
+  }
+
+  for (let value2 of arr2) {
+    if (arr1.indexOf(value2) == -1) {
+      result.push(value2);
+    }
+  }
+  return result;
+}
+console.log(diffrentVAlue([1, 2, 3, 4], [2, 3, 4, 5]));
+
+// //[1, 5]
+
+
+function diffrentVAlue(arr1, arr2) {
+  const mixing = arr1.concat(arr2);
+
+  const filterapply = mixing.filter((num) => {
+    if (arr1.indexOf(num) == -1 || arr2.indexOf(num) == -1) {
+      return num;
+    }
+  });
+  return filterapply
+}
+
+console.log(diffrentVAlue([1, 2, 3, 4], [2, 3, 4, 5]));
+
+//[1, 5]
+
+// code 56: Sum of all numbers from start to end given number
+
+function findMaxAndMin(start, end) {
+  let sum = 0;
+
+  for (let i = start; i <= end; i++) {
+    sum += i;
+  }
+  return sum;
+}
+console.log(findMaxAndMin(1, 4));
+
+// 10
+
+
+
+
   
 
