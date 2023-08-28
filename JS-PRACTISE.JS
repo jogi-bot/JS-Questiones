@@ -603,6 +603,122 @@ console.log(findMaxAndMin(1, 4));
 // 10
 
 
+// code 57: Remove or Delete elements from an array using various ways
+
+let a = [5, 4, 3, 2, 1];
+
+a.length = 1;
+console.log(a);
+
+//5
+
+// second way 
+let a = [5, 4, 3, 2, 1];
+a.shift();
+
+console.log(a);
+
+// [4, 3, 2, 1];
+
+// delete element as an out-put
+
+let a = [5, 4, 3, 2, 1];
+console.log(a.shift(2));
+
+//5
+
+//delte element using splice method
+const a = ["krunal", "sachin", "mayank", "kush"];
+
+
+a.splice(0, 2);
+
+console.log(a);
+
+//[ 'mayank', 'kush' ]
+
+
+ //Explicitly Remove Array Elements Using the Delete Operator
+
+const a = ["krunal", "sachin", "mayank", "kush"];
+
+  delete a[2]
+
+console.log(a);
+ 
+//[ 'krunal', 'sachin', <1 empty item>, 'kush' ]
+
+
+//Using the Array filter Method to Remove Items By Value
+
+const a = [1, 2, 3, 4, 5, 6];
+
+const b = a.filter((num) => num > 4);
+
+console.log(b);
+
+//[ 5, 6 ]
+
+//remove number  like these also,
+let a = [1, 2, 3, 4, 5, 6];
+
+for (let i = 0; i <= a.length; i++) {
+  if (i === 5) {
+    continue;
+  }
+  console.log(i);
+}
+
+//0
+// 1
+// 2
+// 3
+// 4
+// 6
+
+//another way using way 
+let a = [1, 2, 3, 4, 5, 6];
+
+for (let i = 0; i <= a.length; i++) {
+  if (a[i] === 5) {
+    a.splice(i, 1);
+  }
+}
+
+console.log(a);
+
+//[ 1, 2, 3, 4, 6 ]
+
+
+//now explain Currying function with using code understanding
+
+function sum(a) {
+  
+  return function sum(b){
+    return  function sum(c){
+      return  function sum(d){
+        return a+b+c+d
+      }
+    }
+  }
+}
+
+console.log( sum(1)(2)(2)(3));
+
+//8
+const sum = (a) => (b) => (c) => (d) => a + b + c + d;
+
+console.log(sum(1)(1)(1)(1));
+
+//4
+
+
+
+
+
+
+
+
 
 
   
