@@ -712,6 +712,31 @@ console.log(sum(1)(1)(1)(1));
 
 //4
 
+// Code 60: Find SUM, PRODUCT AND AVERAGE of the numbers //accumulation means collection
+
+let arr = [1, 2, 3, 4, 5]
+
+let sum = arr.reduce((acuum, cur) => {
+  return acuum + cur
+})
+
+console.log(sum);
+
+//15
+
+
+//num of numbers using short-hand loop
+function numOfNumbers(...numbers) {
+  let itr = 0;
+
+  for (let num of numbers) {
+    itr += num;
+  }
+
+  return itr;
+}
+console.log(numOfNumbers(1, 2, 4));
+//7
 
 
 
