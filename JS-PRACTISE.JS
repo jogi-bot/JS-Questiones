@@ -738,6 +738,20 @@ function numOfNumbers(...numbers) {
 console.log(numOfNumbers(1, 2, 4));
 //7
 
+//use both map and filter and both use succsefully
+
+console.time("MyTimer");
+
+const numbers = [1, 2, 3, 4, 5, 6, 7];
+
+const total = numbers.filter((num) => num > 4).map((num) => num * num);
+
+console.log(total);
+
+console.timeEnd("MyTimer");
+
+//[25, 36, 49];
+
 
 
 
